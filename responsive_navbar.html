@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Service Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+
+    <style>
+        /*Using my code from 2 assignments ago*/
+        header {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        header h1 {
+            font-weight: bold;
+        }
+        .service-card {
+          text-align: center;
+          padding: 20px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out;
+        }
+        .service-card:hover {
+          transform: translateY(-10px);
+        }
+        .service-icon img {
+          width: 100px;
+          height: 60px;
+          margin-bottom: 15px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 10px;
+        }
+        .service-title {
+          font-size: 1.5rem;
+          margin-top: 15px;
+          font-weight: bold;
+        }
+        .service-description {
+          font-size: 1rem;
+          margin-top: 10px;
+        }
+        .contact-form {
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .contact-form h3 {
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+    </style>
+
+    <!--Question 1 Task 1-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Tech Solutions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Tech Solutions</h1>
+        <h2>Our Services:</h2>
+    </header>
+    <body>
+        <!--Question 1 Tasks 2 and 3-->
+        <section class="container text-center">
+            <div class="row">
+              <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.uSz9mUUDfABwIERnPpCj_AHaEt?rs=1&pid=ImgDetMain" alt="Tech Support Icon">
+                  <div class="card-content">
+                    <h3 class="service-title">Tech Support</h3>
+                    <p class="service-description">We offer expert technical support to solve any issues you encounter with your IT infrastructure.</p>
+                    <button type="button" class="btn btn-primary">Get Support</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/R.4666c52c3ead8cc25f9fecca1622533c?rik=u6Ty6bENiGB1Cw&pid=ImgRaw&r=0" alt="Cloud Services Icon">
+                  <div class="card-content">
+                    <h3 class="service-title">Cloud Services</h3>
+                    <p class="service-description">Our cloud solutions ensure scalability, security, and flexibility for your business operations.</p>
+                    <button type="button" class="btn btn-primary">Explore Cloud</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.aihInMItWo6VYbg0coSt4gHaEK?rs=1&pid=ImgDetMain" alt="Software Development Icon">
+                  <div class="card-content">
+                    <h3 class="service-title">Software Development</h3>
+                    <p class="service-description">We provide custom software development services to meet the unique needs of your business.</p>
+                    <button type="button" class="btn btn-primary">Learn More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="container contact-form">
+            <h3>Contact Us</h3>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="service">Select Service</label>
+                        <select class="form-control" id="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="Tech Support">Tech Support</option>
+                            <option value="Cloud Services">Cloud Services</option>
+                            <option value="Software Development">Software Development</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+          </section>
+    </body>
+</html>
